@@ -1,0 +1,177 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #2c2c2c;
+    background-color: #f4f6f9;
+}
+
+/* Navbar */
+.navbar {
+    position: sticky;
+    top: 0;
+    background: #1e3a8a; /* deep blue */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    z-index: 1000;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 1.5rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #facc15; /* golden yellow */
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://source.unsplash.com/1600x900/?remote,workspace') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #f9fafb;
+    min-height: 50vh;
+    padding: 0.5rem 1rem;
+    background-color: #1e40af; /* fallback color */
+    overlay: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.3rem;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+.hero-content p {
+    margin-bottom: 0.3rem;
+    font-size: 1.2rem;
+    color: #f3f4f6;
+}
+
+/* Button */
+.btn {
+    background: #facc15;
+    color: #1e3a8a;
+    padding: 0.4rem 1.7rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    margin-top: 1rem; /* space above the button */
+}
+
+.btn:hover {
+    background: #fcd34d;
+    transform: translateY(-2px);
+}
+
+/* Benefits Section */
+.benefits {
+    padding: 3rem 2rem;
+    text-align: center;
+    background: #ffffff;
+    color: #333;
+}
+
+.benefit-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.card {
+    background: #f9fafb;
+    padding: 2rem;
+    margin: 1rem;
+    flex: 1 1 250px;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.card i {
+    margin-bottom: 1rem;
+    color: #1e3a8a;
+}
+
+/* Contact Section */
+.contact {
+    padding: 3rem 2rem;
+    text-align: center;
+    background: #f1f5f9;
+}
+
+.contact form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.contact input,
+.contact textarea {
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    border: 1px solid #d1d5db;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact textarea {
+    resize: vertical;
+    height: 120px;
+}
+
+.form-message {
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+    .benefit-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+}
